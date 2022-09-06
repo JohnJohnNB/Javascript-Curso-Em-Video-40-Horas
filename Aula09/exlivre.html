@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste javascript</title>
+    <style>
+        body {
+            background: rgb(153, 86, 216);
+            font: normal 20px Arial;
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Este é um teste da <strong>Aula 09</strong> do curso de JS do Guanabara</h1>
+    <p>- Nessa aula foi introduzido o <strong>DOM</strong> para os alunos</p>
+    <p id="P2">- Foi dito também sobre a importância de saber construir a <strong>Árvore DOM</strong> do site a se construir</p>
+    <script>
+
+        var p1 = document.getElementsByTagName('p')[0]
+        var p2 = document.getElementById('P2')
+        var body = document.body
+        var aulas = window.prompt('Quantas aulas você já fez?')
+        aulas>8?document.write(`- Você está preparado para aprender sobre DOM, porque você já tem ${aulas} aulas<br>`):document.write(`- Você não está preparado para aprender sobre DOM ainda, porque você já tem ${aulas} aulas<br>`)
+        aulas>5?body.style.background = 'green':body.style.background='red'
+        
+    </script>
+    
+    
+</body>
+</html>

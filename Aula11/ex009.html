@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro ou não?</title>
+    <style>
+        body {
+            background-color: rgb(128, 60, 60);
+            font: normal 15pt Arial;
+            color: rgb(212, 71, 201);
+            text-shadow: 2px 2px 5px black;
+        }
+        label {
+            font: normal 15pt Arial;
+            font-weight: bold;
+        }
+        div#país {
+            margin-bottom: 20pt;
+            text-align: center;
+        }
+        input#verificar {
+            width: 173pt;
+            height: 40pt;
+        }
+        h1#titulo1 {
+            text-align: center;
+        }
+        div#botao {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo1">VERIFICAR NACIONALIDADE</h1>
+    <div id="país">
+        <label for="txtpaís">País:</label>
+        <input type="text" name="txtpaís" id="txtpaís">
+    </div>
+    <div id="botao">
+        <input type="button" value="Verificar" id="verificar" onclick="verificar()">
+    </div>
+    <script>
+        function verificar() {
+            var país = document.getElementById('txtpaís').value.toUpperCase()
+            if (país == 'BRASIL') {
+                var resposta = 'Você é brasileiro!'
+            } else if (país == '') {
+                var resposta = 'Por favor preencha o input'
+            } else {
+                var resposta = 'Você é estrangeiro!'
+            }
+            window.alert(resposta)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Shit</title>
+    <style>
+        body {
+            background: rgb(134, 58, 204); 
+        }
+        h1 {
+            font: normal 30pt arial;
+            margin-bottom: 10px;
+           font-weight: bold;
+        }
+        input {
+            margin-top: 5px;
+        }
+        input#botao {
+            width: 125px;
+        }
+        div#div1 {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>WORLD'S GREATEST CALCULATOR EVER</h1>
+    <div id="div1">
+        Número 1: <input type="number" name="txt1" id="txt1"></br>
+        Número 2: <input type="number" name="txt2" id="txt2"></br>
+    </div>
+    <input type="button" value="SOMAR" id="botao" onclick="somar()">
+    <script>
+        function somar() {
+            var n1 = Number(document.getElementById("txt1").value)
+            var n2 = Number(document.getElementById("txt2").value)
+            window.alert(`O resultado da soma entre ${n1} e ${n2} é: ${n1+n2}`)
+        }
+    </script>
+</body>
+</html>
